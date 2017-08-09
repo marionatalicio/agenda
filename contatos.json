@@ -1,0 +1,32 @@
+{
+    "1": {
+        "id": "5978ee921a868",
+        "nome": "Jefferson",
+        "email": "dg@gs.com",
+        "telefone": "3455h"
+    },
+    "2": {
+        "id": "598b57ae696a4",
+        "nome": "d",
+        "email": "d@d.com",
+        "telefone": "d"
+    },
+    "3": {
+        "id": "598b5dc68ebd3",
+        "nome": "",
+        "email": null,
+        "telefone": null
+    },
+    "4": {
+        "id": "598b5dc772dc6",
+        "nome": "",
+        "email": null,
+        "telefone": null
+    },
+    "5": {
+        "id": "598b5dc905e83",
+        "nome": "",
+        "email": null,
+        "telefone": null
+    }
+}
