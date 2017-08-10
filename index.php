@@ -1,6 +1,12 @@
 <?php
     require 'controlador_agenda.php';
-    $meusContatos = pegarContatos();
+
+    if (isset($_GET['nome']) and !empty($_GET['nome'])) {
+    	$meusContatos = buscarContato($_GET['nome']);
+    } else{
+    	$meusContatos = pegarContatos();
+    }
+
 
 ?>
 
@@ -49,7 +55,7 @@
 			</div>
 		</div>
 
-        <form class="form-inline" action="controlador_agenda.php?acao=buscar" method="post" >
+        <form class="form-inline" action="" method="get" >
 
             <div class="form-group">
                 <label for="nome">Buscar</label>

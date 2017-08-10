@@ -89,19 +89,23 @@
     }
 
     function buscarContato($nome){
+        
+        $nome = strtolower($nome);
+        
         $contatos = transformar_JSON_Array("contatos.json");
-        $nomeContato = [];
+        $contatosEncontrados = [];
 
         foreach ($contatos as $contato){
-            if ($contato['nome'] == $nome){
+            if (strtolower($contato['nome']) == $nome){
 
-                $nomeContato[] = $contato['nome'];
+                $contatosEncontrados[] = $contato;
             }
         }
-        header('Location: buscar.php');
-        return $nomeContato;
+        
+        return $contatosEncontrados;
 
     }
+
     //ROTAS DA URL
     if($_GET['acao'] == 'cadastrar'){
         cadastrar();
@@ -113,8 +117,4 @@
     }
     elseif ($_GET['acao'] == 'editado'){
         editadoContato($_POST['id']);
-    }
-    elseif ($_GET['acao'] == 'buscar'){
-        buscarContato($_POST['nome']);
-        header('Location: buscar.php');
     }
